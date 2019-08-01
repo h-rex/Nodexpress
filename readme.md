@@ -16,3 +16,8 @@
 - responding to server
 - serving static file
  
+ # Nodexpress NJS#4
+1 Aug 2019 [https://youtu.be/QX87dZ19rhw]
+## Routing
+## HTTP Methods
+## Middleware

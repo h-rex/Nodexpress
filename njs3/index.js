@@ -1,6 +1,9 @@
 const express = require('express')
-const url = require('url')
 const app = express();
+const url = require('url')
+const bodyParser = require('body-parser')
+
+const parseEncoder = bodyParser.urlencoded({extended: true})
 
 app.get('/', function (req, res) {
   // res.send("again...");
@@ -16,7 +19,17 @@ app.get('/profile', function (req, res) {
 })
 
 app.get('/login', function (req, res) {
-  res.sendFile('./login.html', {root: __dirname});
+  res.sendFile('./login.html', {root: __dirname})
 })
 
-app.listen(8080);
+app.get('/get-response', function (req, res) {
+  res.send(url.parse(req.url, true))
+})
+
+app.post('/post-response', parseEncoder, function (req, res) {
+  res.send(req.body);
+});
+
+app.listen(8000, 'localhost', function () {
+  console.log('Server is up and running...')
+})
