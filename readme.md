@@ -32,5 +32,7 @@
 - Basics
 - Rendering
 - Inheritance 
+
+## Note: use `npm install`
  
 
