@@ -25,3 +25,12 @@
 ## Middleware
 
 - Note:- use `npm install`
+
+# Nodexpress NJS#5
+2 Aug 2019 [https://youtu.be/2gq2WCakk1A]
+## Pug - Template Engine
+- Basics
+- Rendering
+- Inheritance 
+ 
+

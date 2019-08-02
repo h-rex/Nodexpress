@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    title Base Layout
+    block styleSection
+      style.
+        body {
+          background-color: lightgrey;
+        }
+  body
+    block headerSection
+      h1 Base Header
+    
+    block mainSection
+      main 
+        h2 Base Main
+        include table.pug
+
+    block sidebarSection
+      h2 Base Sidebar
+
+    block footerSection
+      p base footer section

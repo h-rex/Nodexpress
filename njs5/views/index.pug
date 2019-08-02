@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    //- link(rel='stylesheet', href='../index.css')
+    style.
+      .red {
+        color: red;
+      }
+    title= pageTitle
+  body
+    h1= siteHeader
+    p(class='red'). 
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eum quos 
+      reiciendis eaque iste mollitia suscipit? Aut nisi, vitae eos repudiandae 
+      maiores dolorum, esse quidem at, nihil amet voluptatum repellat!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur obcaecati illo voluptates eos. Dolores maxime ullam similique, quidem sed saepe eius sit esse odit commodi? Distinctio itaque fugiat molestias?
+
+    if isStatus
+      a(href='https://www.facebook.com/', style='color: orange;') Go to Facebook
+    else
+      p Wait
+
+    include table.pug
+      
+      div(class='p', id='mango').
+        Lorem ipsum<br>
+        okay
+        ipsum lorem 
+
+      div.para Abc def
+      div#para Abc def
+
+      script.
+        console.log('Hello again');
+        console.log('Hello ...');
+
+      script(src='test.js')

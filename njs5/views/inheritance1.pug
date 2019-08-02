@@ -1,0 +1,17 @@
+extends layout.pug
+
+block append styleSection
+  style.
+    h2 {
+      color: green;
+    }
+
+block headerSection 
+  h2= `${customHeader} any text...` 
+  p.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quod laborum, eligendi dolorum dolores accusantium harum cum nobis illo expedita corporis in consequatur exercitationem mollitia voluptatem rerum quo animi repellendus.
+  div= isStatus
+
+block prepend footerSection
+  p from inheritance pug file
+  include table.pug
