@@ -33,6 +33,16 @@
 - Rendering
 - Inheritance 
 
-## Note: use `npm install`
+### Note:
+use `npm install`
  
+# Nodexpress NJS#6
+3 Aug 2019 [https://youtu.be/FHH6Vrwb6QA]
+## Expressjs data persistance
+- JSON
+- fs
+- path
+
+### Note:
+use `npm install`
 
