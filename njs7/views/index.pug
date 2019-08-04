@@ -1,0 +1,109 @@
+doctype html
+html
+  head
+    title= titleText
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    style.
+      body {
+        margin: 0 auto;
+        font-family: verdana, sans-serif;
+        width: 50%;
+      }
+
+      input[type='text'] {
+        display: block;
+        margin-bottom: 10px;
+        width: 98%;
+      }
+
+      #children, #spouse {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      fieldset {
+        margin-bottom: 8px;
+        width: 100%;
+      }
+
+      input[type='button'] {
+        margin: 8px 8px 8px 0px;
+      }
+  body
+    h1 Fill Person Details
+    hr
+
+    p#msg(style="color: green; background-color: lightgrey; padding: 8px;") ...
+
+    form(id="person")
+      label(for="firstname") First Name:
+      input(type="text", name="firstname", id="firstname")
+      
+      label(for="lastname") Last Name:
+      input(type="text", name="lastname", id="lastname")
+
+      fieldset
+        legend is alive?
+        input(type="radio", name="isalive", value="yes", id="alive")
+        label(for="alive") Alive
+
+        input(type="radio", name="isalive", value="no", id="dead")
+        label(for="dead") Dead
+
+      label(for="age") Age:
+      input(type="text", name="age", id="age", placeholder="#")
+      
+      fieldset
+        legend Address
+        label(for="street") Street:
+        input(type="text", name="street", id="street")
+
+        label(for="city") City:
+        input(type="text", name="city", id="city")
+
+        label(for="postalcode") Postal Code:
+        input(type="text", name="postalcode", id="postalcode")
+      
+      fieldset
+        legend Phone Numbers
+        label(for="home") Home:
+        input(type="text", name="home", id="home")
+
+        label(for="office") Office:
+        input(type="text", name="office", id="office")
+
+        label(for="mobile") Mobile: 
+        input(type="text", name="mobile", id="mobile")
+      
+      label(for="children") Children:
+      input(type="number", name="children", id="children", placeholder="#")
+
+      label(for="spouse") Spouse:
+      input(type="text", name="spouse", id="spouse", placeholder="Leave blank if no spouse")
+
+      input(type="submit", value="Submit")
+      input(type="reset", value="Reset")
+
+    script.
+      $(document).ready(function () {
+        $('#person').on('submit', function (event) {
+          event.preventDefault();
+          const personData = $(this).serialize();
+          console.log(personData);
+
+          $.ajax({
+            url: '/person',
+            method: 'delete',
+            data: personData,
+            success: function (result, status, xhr) {
+              console.log('successful...');
+              document.getElementById("msg").innerHTML = result.msg;
+            },
+            error: function (xhr, status, error) {
+              console.log('something went wrong');
+            }
+          });
+
+        })
+      });
+      

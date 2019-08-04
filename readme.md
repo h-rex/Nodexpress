@@ -45,4 +45,13 @@ use `npm install`
 
 ### Note:
 use `npm install`
+ 
+# Nodexpress NJS#7
+4 Aug 2019 [https://youtu.be/y9r_ksYeu8c]
+## Expressjs get, post, put & delete -- Ajax
+- http request methods(get, post, put & delete)
+- jquery ajax method to send data
+
+### Note:
+use `npm install`
 
