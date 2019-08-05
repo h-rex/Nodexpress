@@ -55,3 +55,12 @@ use `npm install`
 ### Note:
 use `npm install`
 
+# Nodexpress NJS#8
+5 Aug 2019 [https://youtu.be/Suwj6PVFvV0]
+## Expressjs cookies, sessions, file uploading
+- cookie-parser
+- express-session
+- multer (multipart/form-data)
+
+### Note:
+use `npm install`

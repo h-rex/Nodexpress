@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Testing Cookies</title>
+</head>
+<body>
+  <h1>Testing Cookies</h1>
+
+  <h2>Single File Upload</h2>
+  <form action="/photoUpload" method="post" enctype="multipart/form-data">
+    <input type="file" name="pic" /> 
+    <input type="text" name="name" />
+    <input type="submit" value="Submit" />
+  </form>
+  
+  <h2>Multiple files upload</h2>
+  <form action="/photoUploadAlbum" method="post" enctype="multipart/form-data">
+    <input type="file" multiple name="pics" /> 
+    <input type="text" name="name" />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script>
+    // setting/creating cookie data
+    document.cookie = "username=John Doe; expires=Tue, 01 Dec 2019 12:00:00 UTC; path=/;";
+    
+    // to unset or delete cookie
+    // document.cookie = "username=; path=/;";
+
+    alert(document.cookie)
+  </script>
+</body>
+</html>
