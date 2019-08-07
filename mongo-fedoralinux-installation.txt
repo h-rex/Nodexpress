@@ -1,0 +1,31 @@
+// Installation -- MongoDB Server
+
+$ vi /etc/yum.repos.d/mongodb.repo
+
+[Mongodb]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
+
+$ sudo dnf install mongod-org
+
+$ sudo systemctl enable mongod.service
+$ sudo systemctl start mongod.service
+
+$ sudo systemctl status mongod.service
+
+
+$ mongod --version
+
+$mongo
+
+> use mydb;
+
+> db.test.save({id: 1})
+
+> db.test.find()
+
+
+

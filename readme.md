@@ -72,3 +72,13 @@ use `npm install`
 - csrf token
 ### Note:
 use `npm install`
+
+# Nodexpress NJS#10
+7 Aug 2019 [https://youtu.be/tW7T87w1Yj0]
+## MongoDB Introduction
+- Mongo Shell
+- use(create) and drop database
+- create, rename, delete collection
+- insert, delete, update, count, skip, sort document
+## Note: 
+#### For all basic commands goto `njs10` directory (in above list)
