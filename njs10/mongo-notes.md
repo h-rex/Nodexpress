@@ -2,13 +2,13 @@
 - It works on concept of 'collection' and 'document'.
 
 ## MongoDB 
-It is container for collections.
+- It is container for collections.
 
 ## Collection
-It is a group of MongoDB documents.
+- It is a group of MongoDB documents.
 
 ## Document
-It is a group of key-value pairs.
+- It is a group of key-value pairs.
 
 ---
 ## To open Mongo shell
