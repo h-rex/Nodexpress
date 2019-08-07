@@ -23,43 +23,43 @@ It is a group of key-value pairs.
 ## Check current/selected DB
 - `$ db`
 ## Delete current database
-- `db.dropDatabase()`
+- `$ db.dropDatabase()`
 ## Copy database
-  - `db.copyDatabase("olddb","newdb")`
+  - `$ db.copyDatabase("olddb","newdb")`
 ## Create collection
-- `db.createCollection("products")`
+- `$ db.createCollection("products")`
 ## Show collection(s)
-- `show collections`
+- `$ show collections`
 ## Rename Collection
-- `db.products.renameCollection("Products")`
+- `$ db.products.renameCollection("Products")`
 ## Drop(delete) collection
-- `db.Products.drop()`
-- Or `db.getCollection("Products").drop()`
+- `$ db.Products.drop()`
+- Or `$ db.getCollection("Products").drop()`
 ## Insert Document(s)
-- `db.Products.insert({"product-name": "Colget", "desc": "Toothpaste"})`
+- `$ db.Products.insert({"product-name": "Colget", "desc": "Toothpaste"})`
 ## To query/find document(s)
-- `db.Products.find()`
-- `db.Products.find({"product-name": "Audi"})`
+- `$ db.Products.find()`
+- `$ db.Products.find({"product-name": "Audi"})`
 ## To update document
-- `db.Products.update({"product-name": "Colget"}, {$set: {"desc": "Tooth cleaner"}})`
+- `$ db.Products.update({"product-name": "Colget"}, {$set: {"desc": "Tooth cleaner"}})`
 ## To delete all documents having specific field
-- `db.Products.remove({"product-name", "Colget"})`
+- `$ db.Products.remove({"product-name", "Colget"})`
 
 ## To delete first matching document having specific field
-- `db.Products.remove({"product-name":"Colget"},1)` 
+- `$ db.Products.remove({"product-name":"Colget"},1)` 
 
 ## delete all the documents
-- `db.Products.remove()`
+- `$ db.Products.remove()`
 ## To show the limited no of document(s) output
-- `db.Products.find().limit(2)`
+- `$ db.Products.find().limit(2)`
 ## To skip certain no of documents
-- `db.Products.find().skip(3)`
+- `$ db.Products.find().skip(3)`
 ## To sort documents output
-- Asc - `db.Products.sort("product-name": 1)`
-- Dsc - `db.Products.sort("product-name": -1)`
+- Asc - `$ db.Products.sort("product-name": 1)`
+- Dsc - `$ db.Products.sort("product-name": -1)`
 ## Counting documents
-- `db.Products.count()`
-- `db.Products.find({"product-name": "Audi"}).count()`
+- `$ db.Products.count()`
+- `$ db.Products.find({"product-name": "Audi"}).count()`
 
 
 
