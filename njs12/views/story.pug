@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    if(story)
+      title= story.stitle
+    else 
+      title No story
+  body
+    if(story)
+      h2= story.stitle 
+      small
+        a(href="/") back
+      hr
+      p= story.scontent
+    else
+      p No Story Found
