@@ -90,8 +90,14 @@ use `npm install`
 ## Note: 
 `npm install`
 
-# Nodexpress NJS#12
+# Nodexpress NJS#12 part 1
 9 Aug 2019 [https://youtu.be/oiwUWdgOPWM]
 ## CRUD Application - MongoDB & Express.js
+## Note: 
+`npm install`
+
+# Nodexpress NJS#12 part 2
+10 Aug 2019 [https://youtu.be/MWBRsnKpY8w]
+## RESTfull CRUD Application - MongoDB & Express.js
 ## Note: 
 `npm install`

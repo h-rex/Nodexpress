@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    style.
+      * {
+          font-family: sans-serif;
+        }
+      body {
+        width: 70%;
+      }
+    if(story)
+      title= story.stitle
+    else 
+      title No story
+  body
+    if(story)
+      h2= story.stitle 
+      small
+        p= `Published: ${story._id.getTimestamp().toDateString()} ` 
+        a(href="/") back
+      hr
+      p= story.scontent
+    else
+      p No Story Found

@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    style.
+      * {
+        font-family: sans-serif;
+      }
+      input[type="text"], textarea {
+        display: block;
+        padding: 4px;
+        margin-bottom: 16px;
+      }
+    title Create Story
+  body
+    h1 Create Story
+    small &nbsp;
+      a(href="/") back
+    hr
+
+    form#create
+      label(for="title") Title
+      input(type="text", name="stitle", placeholder="Title", size="34")
+
+      label(for="content") Content
+      textarea(cols="40", rows="8", name="scontent", placeholder="Story", id="content")
+
+      input(type="submit", value="Save")
+
+    script.
+      $(document).ready(function () {
+        $("#create").on('submit', function(event) {
+          event.preventDefault()
+          const story = $(this).serialize()
+
+          $.ajax({
+            url: '/create',
+            method: 'post',
+            data: story,
+            success: function(result, status, xhr) {
+              console.log('success')
+              window.location.href = result.redirectTo
+            },
+            error: function(xhr, status, error) {
+              console.log('error')
+            }
+          })
+        })
+      })

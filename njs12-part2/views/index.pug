@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    style.
+      * {
+        font-family: sans-serif;
+      }
+      body {
+        width: 70%;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      div { 
+        padding:10px 0px 10px; 
+        margin: 0;
+      }
+      div:nth-child(odd) {
+        background-color: whitesmoke;
+      }
+    title All Stories
+  body
+    h1 Stories 
+    small
+      a(href="/create") Create
+    hr
+    each story in stories
+      div
+        a(href=`/story/${story._id}`)= story.stitle 
+        br
+        small
+          a.delete(href='#', style="color: red;", data-id= story._id) delete &nbsp;
+          a(href=`/update/${story._id}`, style="color: orange;") update
+    else
+      p No story      
+
+    script.
+     $(document).ready(function () {
+        $(".delete").on('click', function(event) {
+          event.preventDefault()
+          const sid = $(event.target).attr('data-id')
+
+          $.ajax({
+            url: '/delete',
+            method: 'delete',
+            data: {id: sid},
+            success: function(result, status, xhr) {
+              console.log('success')
+              window.location.href = result.redirectTo
+            },
+            error: function(xhr, status, error) {
+              console.log('error')
+            }
+          })
+        })
+      })
