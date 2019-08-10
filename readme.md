@@ -97,7 +97,7 @@ use `npm install`
 `npm install`
 
 # Nodexpress NJS#12 part 2
-10 Aug 2019 [https://youtu.be/MWBRsnKpY8w]
+10 Aug 2019 [https://youtu.be/NL71v8teQEs]
 ## RESTfull CRUD Application - MongoDB & Express.js
 ## Note: 
 `npm install`
