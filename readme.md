@@ -101,3 +101,7 @@ use `npm install`
 ## RESTfull CRUD Application - MongoDB & Express.js
 ## Note: 
 `npm install`
+
+# Code Review - CRUD Application
+11 Aug 2019 [https://youtu.be/MWBRsnKpY8w]
+- njs12-part2
